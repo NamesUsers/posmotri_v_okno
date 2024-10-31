@@ -12,6 +12,39 @@ body{
   height: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ================================================== */
+/* ================================================== */
+
 .page {
   display: flex;
   inline-size: 1200px;
@@ -36,8 +69,12 @@ body{
 }
 
 .result__video-container{
-  width: 100%;
+  max-width: 711px;
   margin-bottom: 16px;
+}
+
+.result__video{
+  width: 100%;
 }
 
 .search-form{
@@ -47,14 +84,73 @@ body{
   align-items: end;
 }
 
-.content__list{
-  overflow-y: auto;
+
+.search-form__fieldset{
+  border: none;
+  width: 100%;
 }
 
+.search-form__textfield{
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  border: none;
+  max-width: 225px;
+  width: 100%;
+}
+
+.search-form__checkbox-list{
+  display: flex;
+}
+
+.search-form__label{
+  display: flex;
+}
+.search-form__fieldset-title{
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  margin-bottom: 5px;
+}
+
+.search-form__label-text{
+  display: block;
+  margin-right: 15px;
+}
+
+.search-form__pseudo-checkbox::before{
+  content: "";
+  display: block;
+  border: 1px solid rgb(255, 255, 255);
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+}
+.search-form__pseudo-checkbox:checked:before{
+  background: rgb(255, 255, 255);
+  margin: 2px;
+}
+
+
+/* ================================================ */
+/* ================================================ */
+
 .content__details{
-  
+  max-width: 399px;
+  width: 100%;
+  max-height: 534px;
   height: 100%;
 }
+.content__list{
+  overflow-y: scroll;
+}
+
 
 .title{
   font-family: Oswald;
@@ -71,21 +167,22 @@ body{
   color: #545050;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
+.content__list-item{
+  margin-bottom: 32px;
+}
+.content__list-item:last-child{
+  margin-bottom: 0;
 }
 
-ul,
-ol {
-  list-style: none;
+.content__video-card{
+  display: flex;
+  justify-content: space-between;
 }
+
+.content__video-card-thumbnail{
+  max-width: 194px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
