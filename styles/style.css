@@ -89,6 +89,7 @@ ol {
 .result__video {
   width: 100%;
   object-fit: cover;
+  object-position: center;
   max-height: 386px;
 }
 
@@ -99,6 +100,9 @@ ol {
   align-items: end;
 }
 
+.search-form__fieldset:last-of-type {
+  margin-right: 30px;
+}
 
 .search-form__fieldset {
   border: none;
@@ -144,6 +148,9 @@ ol {
   line-height: 22px;
   letter-spacing: 0%;
   margin-bottom: 5px;
+}
+.search-form__fieldset-title:last-of-type {
+  margin-bottom: 10px;
 }
 
 .search-form__label-text {
