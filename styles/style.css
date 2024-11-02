@@ -113,6 +113,11 @@ ol {
   margin-right: 24px;
 }
 
+.search-form__fieldset:nth-child(2) .search-form__fieldset-title {
+  margin-bottom: 7px;
+  margin-left: 3px;
+}
+
 .search-form__label {
   display: flex;
   cursor: pointer;
