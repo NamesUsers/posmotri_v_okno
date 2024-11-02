@@ -127,8 +127,9 @@ ol {
 .search-form__checkbox-list .search-form__label{
   max-height: 21px;
 }
-.search-form__label:has(:focus-visible){
-  outline: 1px solid white;
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__label:has(:focus-visible){
@@ -151,9 +152,7 @@ ol {
   appearance: none;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-}
+
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Fira Sans Condensed';
