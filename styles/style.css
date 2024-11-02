@@ -110,7 +110,7 @@ ol {
   border: none;
   max-width: 225px;
   width: 100%;
-  margin-right: 40px;
+  margin-right: 24px;
 }
 
 .search-form__label {
@@ -121,7 +121,6 @@ ol {
 
 .search-form__checkbox-list .search-form__label{
   max-height: 21px;
-
 }
 .search-form__label:has(:focus-visible){
   outline: 1px solid white;
@@ -161,6 +160,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
+  margin-bottom: 5px;
 }
 
 .search-form__fieldset-title {
