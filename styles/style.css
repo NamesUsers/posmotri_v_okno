@@ -34,6 +34,7 @@ body{
   background: transparent;
   padding: 6px 73.5px;
   max-height: 34px;
+  cursor: pointer;
 }
 
 h1,
@@ -112,6 +113,19 @@ ol {
   margin-right: 40px;
 }
 
+.search-form__label {
+  display: flex;
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible){
+  outline: 1px solid white;
+}
+
+.search-form__label:has(:focus-visible){
+  outline: 1px solid white;
+}
+
 .search-form__textfield {
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
@@ -124,6 +138,11 @@ ol {
   border: none;
   border-bottom: 1px solid rgb(255, 255, 255);
   border-top: 1px solid rgb(255, 255, 255);
+  outline: none;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
   outline: none;
 }
 .search-form__textfield::placeholder {
@@ -139,9 +158,6 @@ ol {
   display: flex;
 }
 
-.search-form__label {
-  display: flex;
-}
 .search-form__fieldset-title {
   color: rgb(255, 255, 255);
   font-size: 18px;
@@ -154,9 +170,21 @@ ol {
   margin-bottom: 5px; 
 }
 
+
+
 .search-form__label-text {
   display: block;
   margin-right: 15px;
+  transition: all .3s;
+}
+.search-form__submit-button:hover,
+.search-form__label-text:hover {
+  transition: all .3s;
+  text-decoration: underline;
+}
+
+.search-form__submit-button:focus{
+  outline: 1px solid white;
 }
 
 .search-form__pseudo-checkbox {
@@ -179,6 +207,11 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .search-form__submit-button{
   max-width: 194px;
+  transition: all .3s;
+}
+.search-form__submit-button:active {
+  background: rgb(84, 80, 80);
+  transition: all .3s;
 }
 
 /* ================================================ */
@@ -186,6 +219,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__details {
   max-width: 399px;
+  min-height: 534px;
   width: 100%;
 }
 .content__list {
@@ -193,7 +227,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   overflow-y: scroll;
   max-height: 298px;
 }
-
 
 .title {
   font-family: Oswald, sans-serif;
@@ -222,8 +255,29 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   justify-content: space-between;
 }
 
+.content__video-card:hover {
+  text-decoration: underline white;
+}
+
+.content__card-link:focus{
+  outline: none;
+}
+.content__card-link:focus-visible{
+  outline: 1px solid white;
+  margin: 2px;
+}
+
 .content__card-link{
+  display: block;
   text-decoration: none;
+}
+
+.content__list-item:first-child .content__card-link_current {
+  background: rgb(84, 80, 80);
+}
+
+.content__card-link_current:active {
+  background: rgb(84, 80, 80);
 }
 
 .content__video-card-title{
@@ -244,7 +298,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   font-weight: 400;
   line-height: 16.2px;
   letter-spacing: 0%;
-  text-decoration: none;
 }
 
 .content__video-card-thumbnail {
