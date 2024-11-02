@@ -116,8 +116,13 @@ ol {
 .search-form__label {
   display: flex;
   cursor: pointer;
+  margin-right: 15px;
 }
 
+.search-form__checkbox-list .search-form__label{
+  max-height: 21px;
+
+}
 .search-form__label:has(:focus-visible){
   outline: 1px solid white;
 }
@@ -166,16 +171,21 @@ ol {
   letter-spacing: 0%;
   margin-bottom: 5px;
 }
-.search-form__fieldset:nth-of-type(2) .search-form__label-text {
-  margin-bottom: 5px; 
+
+
+.search-form__label:focus{
+  outline: 1px solid white;
 }
 
-
-
 .search-form__label-text {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
   display: block;
-  margin-right: 15px;
   transition: all .3s;
+  margin-bottom: 5px;
 }
 .search-form__submit-button:hover,
 .search-form__label-text:hover {
