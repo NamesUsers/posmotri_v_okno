@@ -30,7 +30,7 @@ body{
   line-height: 22px;
   letter-spacing: 0%;
   text-align: center;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid currentColor;
   background: transparent;
   padding: 5px 74px;
   max-height: 34px;
@@ -120,6 +120,7 @@ ol {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   cursor: pointer;
   margin-right: 15px;
 }
@@ -138,7 +139,6 @@ ol {
 
 .search-form__textfield {
   background: transparent;
-  color: rgba(255, 255, 255, 0.7);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -189,7 +189,6 @@ ol {
   letter-spacing: 0%;
   display: block;
   transition: all .3s;
-  margin-bottom: 5px;
 }
 .search-form__submit-button:hover,
 .search-form__label-text:hover {
@@ -233,7 +232,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__details {
   max-width: 399px;
-  min-height: 534px;
   width: 100%;
 }
 .content__list {
@@ -269,7 +267,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   justify-content: space-between;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline white;
 }
 
@@ -326,6 +324,3 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   width: 100%;
 }
 
-::-webkit-scrollbar{
-  display: none;
-}
