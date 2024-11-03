@@ -128,7 +128,7 @@ ol {
 .search-form__checkbox-list .search-form__label{
   max-height: 21px;
 }
-
+.search-form__label:focus,
 .content__card-link:focus,
 .search-form__submit-button:focus,
 .search-form__textfield:focus {
@@ -136,7 +136,6 @@ ol {
 }
 
 .search-form__submit-button:focus-visible,
-.search-form__label:focus,
 .search-form__label:has(:focus-visible){
   outline: 1px solid white;
 }
