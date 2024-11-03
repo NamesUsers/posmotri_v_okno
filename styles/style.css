@@ -129,10 +129,14 @@ ol {
   max-height: 21px;
 }
 
+.content__card-link:focus,
+.search-form__submit-button:focus,
 .search-form__textfield:focus {
   outline: none;
 }
 
+.search-form__submit-button:focus-visible,
+.search-form__label:focus,
 .search-form__label:has(:focus-visible){
   outline: 1px solid white;
 }
@@ -146,6 +150,7 @@ ol {
   letter-spacing: 0%;
   width: 225px;
   border: none;
+  color: white;
   border-bottom: 1px solid rgb(255, 255, 255);
   border-top: 1px solid rgb(255, 255, 255);
   outline: none;
@@ -177,10 +182,6 @@ ol {
 }
 
 
-.search-form__label:focus{
-  outline: 1px solid white;
-}
-
 .search-form__label-text {
   color: rgb(255, 255, 255);
   font-size: 18px;
@@ -190,15 +191,14 @@ ol {
   display: block;
   transition: all .3s;
 }
+
+.content__card-link:hover,
 .search-form__submit-button:hover,
-.search-form__label-text:hover {
-  transition: all .3s;
-  text-decoration: underline;
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline white;
 }
 
-.search-form__submit-button:focus{
-  outline: 1px solid white;
-}
+
 
 .search-form__pseudo-checkbox {
   display: flex;
@@ -222,16 +222,18 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   max-width: 194px;
   transition: all .3s;
 }
+
+.content__card-link_current,
 .search-form__submit-button:active {
   background: rgb(84, 80, 80);
-  transition: all .3s;
 }
 
 /* ================================================ */
 /* ================================================ */
 
 .content__details {
-  max-width: 399px;
+  align-self: start;
+  max-width: 400px;
   width: 100%;
 }
 .content__list {
@@ -267,13 +269,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   justify-content: space-between;
 }
 
-.content__card-link:hover {
-  text-decoration: underline white;
-}
-
-.content__card-link:focus{
-  outline: none;
-}
 .content__card-link:focus-visible{
   outline: 1px solid white;
   margin: 2px;
@@ -282,14 +277,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .content__card-link{
   display: block;
   text-decoration: none;
-}
-
-.content__list-item:first-child .content__card-link_current {
-  background: rgb(84, 80, 80);
-}
-
-.content__card-link_current:active {
-  background: rgb(84, 80, 80);
 }
 
 .content__video-card-title{
@@ -301,6 +288,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   letter-spacing: 0%;
   text-transform: uppercase;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .content__video-card-description{
@@ -310,6 +300,11 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   font-weight: 400;
   line-height: 16.2px;
   letter-spacing: 0%;
+}
+
+.content__video-card-description-container{
+  max-width: 200px;
+  width: 100%;
 }
 
 .content__video-card-thumbnail {
