@@ -130,12 +130,12 @@ ol {
 }
 .search-form__label:focus,
 .content__card-link:focus,
-.search-form__submit-button:focus,
+.button:focus,
 .search-form__textfield:focus {
   outline: none;
 }
 
-.search-form__submit-button:focus-visible,
+.button:focus-visible,
 .search-form__label:has(:focus-visible){
   outline: 1px solid white;
 }
@@ -191,7 +191,7 @@ ol {
 }
 
 .content__card-link:hover,
-.search-form__submit-button:hover,
+.button:hover,
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline white;
 }
@@ -221,8 +221,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   transition: all .3s;
 }
 
+.content__card-link:active,
 .content__card-link_current,
-.search-form__submit-button:active {
+.button:active {
   background: rgb(84, 80, 80);
 }
 
